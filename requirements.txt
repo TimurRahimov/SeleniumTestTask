@@ -1,0 +1,9 @@
+pip~=23.3
+attrs~=24.2.0
+wheel~=0.41.2
+PySocks~=1.7.1
+setuptools~=68.2.0
+packaging~=24.1
+typing_extensions~=4.12.2
+selenium~=4.24.0
+Faker~=28.4.1

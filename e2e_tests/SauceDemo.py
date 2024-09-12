@@ -55,8 +55,7 @@ class SauceDemo(unittest.TestCase):
         inventory_btn = inventory_item.find_element(By.CLASS_NAME, "btn_inventory")
         self.assertEqual(inventory_btn.text, "Remove")
 
-        shopping_cart_div = self.driver.find_element(By.ID, "shopping_cart_container")
-        shopping_cart_div.click()
+        self.__goto_shopping_cart()
 
         cart_items = self.driver.find_elements(By.CLASS_NAME, "cart_item")
         self.assertEqual(len(cart_items), 1)
@@ -125,6 +124,13 @@ class SauceDemo(unittest.TestCase):
 
         complete_headers = self.driver.find_elements(By.CLASS_NAME, "complete-header")
         self.assertEqual(len(complete_headers), 1)
+
+        self.__goto_shopping_cart()
+        self.assertEqual(len(self.driver.find_elements(By.CLASS_NAME, "cart_item")), 0)
+
+    def __goto_shopping_cart(self):
+        shopping_cart_div = self.driver.find_element(By.ID, "shopping_cart_container")
+        shopping_cart_div.click()
 
     def tearDown(self):
         self.driver.close()

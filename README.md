@@ -14,19 +14,18 @@ End-to-end тесты проверки сценариев авторизации
 
 6. Активировать виртуальное окружение:
 
-- Для Windows (PowerShell): `.\venv\Scripts\activate.bat`
-- Для Windows (Командная строка): `.\venv\Scripts\activate`
-- Для Linux: `./venv/Scripts/activate`
-
+- Для Windows (PowerShell): `.\venv\Scripts\activate.ps1`
+- Для Windows (Командная строка): `.\venv\Scripts\activate.bat`
+- Для Linux: `source ./venv/bin/activate`
 
 7. Установить требуемые библиотеки:
 
 - Для Windows: `.\venv\Scripts\python.exe -m pip install -r requirements.txt`
-- Для Linux: `abc`
+- Для Linux: `pip install -r requirements.txt`
 
 8. Запустить скрипт:
 
 - Для Windows: `.\venv\Scripts\python.exe main.py`
-- Для Linux: `abc`
+- Для Linux: `python3 main.py`
 
 9. По прохождении всех тестов в командной строке отобразится сообщение "Ran 4 tests in **.***s", под которым будет написано "OK"
